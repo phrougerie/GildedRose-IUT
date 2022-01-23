@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="GildedRoseGoldenMaster.cs" />
     <Compile Include="GildedRose.cs" />
+    <Compile Include="ItemRepository.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
