@@ -26,3 +26,12 @@ else
 {
     Items[i].Quality = Items[i].Quality - 1;
 }
+
+
+Troisième étape:
+
+On efface les conditions Sulfuras et on la met dans une première condition de garde. En effet celle-ci s'ouvre sur une condition vide.
+
+Quatrième étape:
+
+Extraction dans des méthodes de item.Quality = item.Quality - 1; et item.Quality = item.Quality + 1;

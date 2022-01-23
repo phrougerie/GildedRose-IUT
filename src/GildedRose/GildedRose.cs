@@ -36,7 +36,7 @@ namespace GildedRose
                         {
                             if (item.Quality < 50)
                             {
-                                item.Quality = item.Quality + 1;
+                                IncreaseQuality(item);
                             }
                         }
 
@@ -44,7 +44,7 @@ namespace GildedRose
                         {
                             if (item.Quality < 50)
                             {
-                                item.Quality = item.Quality + 1;
+                                IncreaseQuality(item);
                             }
                         }
                     }
@@ -61,8 +61,8 @@ namespace GildedRose
                 {
                     if (item.Quality > 0)
                     {
-                      item.Quality = item.Quality - 1;
-                        
+                        DecreaseQuality(item);
+
                     }
                 }
                                 
@@ -78,9 +78,9 @@ namespace GildedRose
                 {
                     if (item.Quality < 50)
                     {
-                        item.Quality = item.Quality + 1;
+                        IncreaseQuality(item);
                     }
-                    
+
                 }
                 else
                 {
@@ -92,12 +92,22 @@ namespace GildedRose
                     {
                         if (item.Quality > 0)
                         {
-                            item.Quality = item.Quality - 1;
+                            DecreaseQuality(item);
 
                         }
                     }
                 }
             }
+        }
+
+        private static void IncreaseQuality(Item item)
+        {
+            item.Quality = item.Quality + 1;
+        }
+
+        private static void DecreaseQuality(Item item)
+        {
+            item.Quality = item.Quality - 1;
         }
     }
 }
