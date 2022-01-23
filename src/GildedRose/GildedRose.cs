@@ -19,6 +19,11 @@ namespace GildedRose
 
         private void UpdateQuality(Item item)
         {
+            if (item.Name == "Sulfuras, Hand of Ragnaros")
+            {
+                return;
+            }
+
             if (item.Name == "Aged Brie" )
             {
                 if (item.Quality < 50)
@@ -56,25 +61,16 @@ namespace GildedRose
                 {
                     if (item.Quality > 0)
                     {
-                        if (item.Name == "Sulfuras, Hand of Ragnaros")
-                        {
-                        }
-                        else
-                        {
-                            item.Quality = item.Quality - 1;
-                        }
+                      item.Quality = item.Quality - 1;
+                        
                     }
                 }
                                 
             }
 
-            if (item.Name == "Sulfuras, Hand of Ragnaros")
-            {
-            }
-            else
-            {
-                item.SellIn = item.SellIn - 1;
-            }
+            
+            item.SellIn = item.SellIn - 1;
+            
 
             if (item.SellIn < 0)
             {
@@ -96,14 +92,8 @@ namespace GildedRose
                     {
                         if (item.Quality > 0)
                         {
-                            if (item.Name == "Sulfuras, Hand of Ragnaros")
-                            {
-                            }
-                            else
-                            {
-                                item.Quality = item.Quality - 1;
+                            item.Quality = item.Quality - 1;
 
-                            }
                         }
                     }
                 }
