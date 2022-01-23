@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GildedRoseGoldenMaster.cs" />
     <Compile Include="GildedRose.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Program.cs" />

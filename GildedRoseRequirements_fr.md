@@ -34,6 +34,8 @@ Cela nécessite une mise à jour de notre système :
 
 - les éléments "Conjured" voient leur qualité se dégrader de deux fois plus vite que les objets normaux.
 
+Les assistants de la taverne vous ont préparé une classe GildedRoseGoldenMaster. C'est une copie de la classe GildenRose que vous utiliserez en tant que comparaison avec votre classe modifiée dans les tests unitaires.
+
 Vous pouvez faire les changements que vous voulez à la méthode `updateQuality` et ajouter autant de code que vous voulez, tant que tout fonctionne correctement.
 De même, vous pouvez modifier la classe `Item` ou ses propriétés ou même créer une classe abstraite car cette classe appartient au gobelin de l'étage et il est plus conciliant qu'il n'y paraît.
 (Vous pouvez ajouter une méthode `updateQuality` et des propriétés statiques dans la classe `Item` si vous voulez)
