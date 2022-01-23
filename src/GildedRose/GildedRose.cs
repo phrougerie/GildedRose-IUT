@@ -34,18 +34,12 @@ namespace GildedRose
                     {
                         if (item.SellIn < 11)
                         {
-                            if (item.Quality < 50)
-                            {
-                                IncreaseQuality(item);
-                            }
+                            IncreaseQuality(item);
                         }
 
                         if (item.SellIn < 6)
                         {
-                            if (item.Quality < 50)
-                            {
-                                IncreaseQuality(item);
-                            }
+                            IncreaseQuality(item);
                         }
                     }
                 }
@@ -59,11 +53,7 @@ namespace GildedRose
                 }
                 else
                 {
-                    if (item.Quality > 0)
-                    {
-                        DecreaseQuality(item);
-
-                    }
+                    DecreaseQuality(item);
                 }
                                 
             }
@@ -76,10 +66,7 @@ namespace GildedRose
             {
                 if (item.Name == "Aged Brie")
                 {
-                    if (item.Quality < 50)
-                    {
-                        IncreaseQuality(item);
-                    }
+                    IncreaseQuality(item);
 
                 }
                 else
@@ -90,11 +77,7 @@ namespace GildedRose
                     }
                     else
                     {
-                        if (item.Quality > 0)
-                        {
-                            DecreaseQuality(item);
-
-                        }
+                        DecreaseQuality(item);
                     }
                 }
             }
@@ -102,12 +85,20 @@ namespace GildedRose
 
         private static void IncreaseQuality(Item item)
         {
-            item.Quality = item.Quality + 1;
+            if (item.Quality < 50)
+            {
+                item.Quality = item.Quality + 1;
+            }
         }
 
         private static void DecreaseQuality(Item item)
         {
-            item.Quality = item.Quality - 1;
+            if (item.Quality > 0)
+            {
+                item.Quality = item.Quality - 1;
+            }
+
+            
         }
     }
 }
